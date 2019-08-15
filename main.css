@@ -1,0 +1,17 @@
+body {
+    text-align: left;
+    background-color: #ffffec;
+    font-family: 'Open Sans', sans-serif;
+    width: 300px;
+    
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+}
+
+.grid-container > div {
+    border: 1px solid #9f9f9f;
+}
