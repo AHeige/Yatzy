@@ -38,6 +38,10 @@ window.onload = function(){
         }else
         do {
             let p = prompt("Namn på spelare: " + i);
+            if (p === null){
+                newGame();
+                return;
+            }
             players.push(p);
             a--
             i++
