@@ -6,118 +6,128 @@
     <script src="main.js"></script>
     </head>
     <body>
-        <p> Let's play some yatzy!</p>
-        <div class="grid-container">
+        <p id="start"><button>Start a new game</button></p>
+        <div id="grid-container">
             <div>Namn</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1"/></div>
+            <div><input id="namn2"/></div>
+            <div><input id="namn3"/></div>
+            <div><input id="namn4"/></div>
+            <div><input id="namn5"/></div>
             <div>1</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr1"></div>
+            <div><input id="namn2-nr1"></div>
+            <div><input id="namn3-nr1"></div>
+            <div><input id="namn4-nr1"></div>
+            <div><input id="namn5-nr1"></div>
             <div>2</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr2"></div>
+            <div><input id="namn2-nr2"></div>
+            <div><input id="namn3-nr2"></div>
+            <div><input id="namn4-nr2"></div>
+            <div><input id="namn5-nr2"></div>
             <div>3</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr3"></div>
+            <div><input id="namn2-nr3"></div>
+            <div><input id="namn3-nr3"></div>
+            <div><input id="namn4-nr3"></div>
+            <div><input id="namn5-nr3"></div>
             <div>4</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr4"></div>
+            <div><input id="namn2-nr4"></div>
+            <div><input id="namn3-nr4"></div>
+            <div><input id="namn4-nr4"></div>
+            <div><input id="namn5-nr4"></div>
             <div>5</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr5"></div>
+            <div><input id="namn2-nr5"></div>
+            <div><input id="namn3-nr5"></div>
+            <div><input id="namn4-nr5"></div>
+            <div><input id="namn5-nr5"></div>
             <div>6</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="total">Total</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-nr6"></div>
+            <div><input id="namn2-nr6"></div>
+            <div><input id="namn3-nr6"></div>
+            <div><input id="namn4-nr6"></div>
+            <div><input id="namn5-nr6"></div>
+            <div id="total-uppe">Total</div>
+            <div><input id="namn1-totuppe"></div>
+            <div><input id="namn2-totuppe"></div>
+            <div><input id="namn3-totuppe"></div>
+            <div><input id="namn4-totuppe"></div>
+            <div><input id="namn5-totuppe"></div>
+            <div id="bonus">Bonus</div>
+            <div><input id="namn1-bonus"></div>
+            <div><input id="namn2-bonus"></div>
+            <div><input id="namn3-bonus"></div>
+            <div><input id="namn4-bonus"></div>
+            <div><input id="namn5-bonus"></div>
             <div>PAR</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-par"></div>
+            <div><input id="namn2-par"></div>
+            <div><input id="namn3-par"></div>
+            <div><input id="namn4-par"></div>
+            <div><input id="namn5-par"></div>
             <div>2 Par</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-2par"></div>
+            <div><input id="namn2-2par"></div>
+            <div><input id="namn3-2par"></div>
+            <div><input id="namn4-2par"></div>
+            <div><input id="namn5-2par"></div>
             <div>Tretal</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-3tal"></div>
+            <div><input id="namn2-3tal"></div>
+            <div><input id="namn3-3tal"></div>
+            <div><input id="namn4-3tal"></div>
+            <div><input id="namn5-3tal"></div>
             <div>Fyrtal</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-4tal"></div>
+            <div><input id="namn2-4tal"></div>
+            <div><input id="namn3-4tal"></div>
+            <div><input id="namn4-4tal"></div>
+            <div><input id="namn5-4tal"></div>
             <div>Lilla</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-lilla"></div>
+            <div><input id="namn2-lilla"></div>
+            <div><input id="namn3-lilla"></div>
+            <div><input id="namn4-lilla"></div>
+            <div><input id="namn5-lilla"></div>
             <div>Stora</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-stora"></div>
+            <div><input id="namn2-stora"></div>
+            <div><input id="namn3-stora"></div>
+            <div><input id="namn4-stora"></div>
+            <div><input id="namn5-stora"></div>
             <div>Kåk</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-hus"></div>
+            <div><input id="namn2-hus"></div>
+            <div><input id="namn3-hus"></div>
+            <div><input id="namn4-hus"></div>
+            <div><input id="namn5-hus"></div>
             <div>Chans</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-chans"></div>
+            <div><input id="namn2-chans"></div>
+            <div><input id="namn3-chans"></div>
+            <div><input id="namn4-chans"></div>
+            <div><input id="namn5-chans"></div>
             <div>Yatzy</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="total">Total</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><input id="namn1-chans"></div>
+            <div><input id="namn2-chans"></div>
+            <div><input id="namn3-chans"></div>
+            <div><input id="namn4-chans"></div>
+            <div><input id="namn5-chans"></div>
+            <div id="total">Total</div>
+            <div id="namn1-total"></div>
+            <div id="namn2-total"></div>
+            <div id="namn3-total"></div>
+            <div id="namn4-total"></div>
+            <div id="namn5-total"></div>
         </div>
-        <div id="throw">Kasta ett slag!</div>
-        <div id="result"></div>
+        <br>
+        <div id="whosturn"></div><br>
+        <div id="throw"><button>Kasta ett slag!</button><br></div>
+        <div id="next"><button>Nöjd? - Nästa spelare</button><br></div>
+        <br>
+        <div id="result"><p id="throwed"></p></div>
     </body>
 </html>

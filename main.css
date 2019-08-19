@@ -1,17 +1,56 @@
 body {
-    text-align: left;
+    text-align: center;
     background-color: #ffffec;
     font-family: 'Open Sans', sans-serif;
-    width: 300px;
-    
+    width: 98%;
 }
 
-.grid-container{
-    display: grid;
+body > div {
+    float:left;
+}
+
+#grid-container{
+    width: 300px;
+    display: none;
     grid-template-columns: repeat(6, 1fr);
     text-align: center;
 }
 
-.grid-container > div {
+#grid-container > div {
     border: 1px solid #9f9f9f;
+}
+
+#grid-container div > input {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    height: 2em;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+#result{
+    margin-left: 5px;
+}
+
+#result > #dice1, #dice2, #dice3, #dice4, #dice5{
+    border: 1px solid black;
+    width: 30px;
+    text-align: center;
+    margin: 1px;
+    float: left;
+
+}
+
+.active{
+    background-color: rgb(167, 177, 255);
+}
+
+#throw{
+    display: none;
+}
+
+#next {
+    display: none;
 }
