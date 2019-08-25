@@ -1,8 +1,11 @@
+@charset "UTF-8";
+
 body {
     text-align: center;
     background-color: #ffffec;
     font-family: 'Open Sans', sans-serif;
     width: 98%;
+    
 }
 
 body > div {
@@ -53,4 +56,17 @@ body > div {
 
 #next {
     display: none;
+}
+
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    //border-radius: 10px;   
 }

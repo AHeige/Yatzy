@@ -170,7 +170,7 @@ window.onload = function(){
 
         }else
         if (timethrowed = 3){
-            alert("Du har inga fler kast");
+            alert("Åh nej - Du har inga fler kast!");
         }
     
     }
