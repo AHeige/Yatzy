@@ -136,7 +136,7 @@ window.onload = function(){
             let i = 0;
             let dicenum = 1; 
             let k = document.getElementById("result");
-            //timethrowed++
+            timethrowed++
             document.getElementById("throwed").innerHTML = "Antal kast: " +timethrowed;
             do {
                 let dicename = "dice" + dicenum;
@@ -150,7 +150,7 @@ window.onload = function(){
         }
         else if (classlength > 0 && timethrowed < 3){
             clearResult();
-            //timethrowed++
+            timethrowed++
             let dicenum = 1;
             let i = 0;
             let k = document.getElementById("result");
