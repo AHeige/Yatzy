@@ -43,12 +43,18 @@ body > div {
     text-align: center;
     margin: 1px;
     float: left;
+    cursor: pointer;
 
 }
 
 .active{
     background-color: rgb(167, 177, 255);
 }
+
+/*
+.chosen{
+    background-color: rgb(167, 177, 255);
+}*/
 
 #throw{
     display: none;
@@ -70,3 +76,20 @@ button{
     font-size: 16px;
     //border-radius: 10px;   
 }
+
+#yatzy{
+    font-size: 4em;
+    color: rgb(255, 0, 225);
+    position: absolute;
+    margin-left: 50%;
+    top: 50%;
+    animation-name: yatzy;
+    animation-duration: 2s;
+    animation-iteration-count: 10;
+}
+
+@keyframes yatzy {
+    from {color: rgb(0, 72, 255);}
+    to {color: rgb(0, 255, 30);}
+  }
+

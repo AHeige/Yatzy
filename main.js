@@ -98,8 +98,24 @@ window.onload = function(){
         document.getElementById("namn5-totuppe").value = e;
     }
 
-    function sumTot(){
-
+    function yatzyCheck(){
+        let a = parseFloat(document.getElementById("dice1").innerHTML);
+        let b = parseFloat(document.getElementById("dice2").innerHTML);
+        let c = parseFloat(document.getElementById("dice3").innerHTML);
+        let d = parseFloat(document.getElementById("dice4").innerHTML);
+        let e = parseFloat(document.getElementById("dice5").innerHTML);
+        let k = (a === b &&
+                a === c &&
+                a === d &&
+                a === e);
+        console.log(k);
+        let f = document.getElementById("yatzy");
+        console.log(a+b+c+d+e);
+        if (k == true){
+            console.log("YATZY!!");
+            f.innerHTML = "YATZY!!";
+        }
+        
     }
 
     function clearResult(){
@@ -115,13 +131,12 @@ window.onload = function(){
         getActive();
         document.getElementById("next").style.display = "block";
         document.getElementById("next").addEventListener("click", nextPlayer)
-        console.log(classlength);
         if (classlength < 1 && timethrowed < 3){
             clearResult();
             let i = 0;
             let dicenum = 1; 
             let k = document.getElementById("result");
-            timethrowed++
+            //timethrowed++
             document.getElementById("throwed").innerHTML = "Antal kast: " +timethrowed;
             do {
                 let dicename = "dice" + dicenum;
@@ -131,44 +146,39 @@ window.onload = function(){
                 i++
                 dicenum++
             } while (i < 5)
-            document.getElementById("dice1").addEventListener("click", toggleActive)
-            document.getElementById("dice2").addEventListener("click", toggleActive)
-            document.getElementById("dice3").addEventListener("click", toggleActive)
-            document.getElementById("dice4").addEventListener("click", toggleActive)
-            document.getElementById("dice5").addEventListener("click", toggleActive)
-        }else
-        if (classlength > 0 && timethrowed < 3){
+            clickDice();
+        }
+        else if (classlength > 0 && timethrowed < 3){
             clearResult();
-            timethrowed++
+            //timethrowed++
             let dicenum = 1;
             let i = 0;
             let k = document.getElementById("result");
             document.getElementById("throwed").innerHTML = "Antal kast: " +timethrowed;
-            let cl = 5 - classlength;
+            let cl = classlength;
             do {
                 let dicename = "dice" + dicenum;
                 let b = k.innerHTML;
-                k.innerHTML = b +  "<div id="+dicename+">"+ y[i] + "</div>";
+                k.innerHTML = b +  "<div id="+dicename+" class='active'>"+ y[i] + "</div>";
                 i++
                 dicenum++
             } while (classlength > i)
-            do {
-                let dicename = "dice" + dicenum;
-                let a = Math.floor((Math.random() * 6) + 1);
-                let b = k.innerHTML;
-                k.innerHTML = b + "<div id="+dicename+">"+ a + "</div>"
-                cl--
-                dicenum++
-            }while (cl > 0)
-            document.getElementById("dice1").addEventListener("click", toggleActive)
-            document.getElementById("dice2").addEventListener("click", toggleActive)
-            document.getElementById("dice3").addEventListener("click", toggleActive)
-            document.getElementById("dice4").addEventListener("click", toggleActive)
-            document.getElementById("dice5").addEventListener("click", toggleActive)
-
-        }else
-        if (timethrowed = 3){
-            alert("Åh nej - Du har inga fler kast!");
+            if (cl != 5){
+                do {
+                        let dicename = "dice" + dicenum;
+                        let a = Math.floor((Math.random() * 6) + 1);
+                        let b = k.innerHTML;
+                        k.innerHTML = b + "<div id="+dicename+">"+ a + "</div>"
+                        cl++
+                        dicenum++
+                }while (cl < 5)
+            clickDice();
+            }
+            
+        }else {
+            if (timethrowed = 3){
+                alert("Åh nej - Du har inga fler kast!");
+            }
         }
     
     }
@@ -205,6 +215,15 @@ window.onload = function(){
         turn = 0;
         whosTurn(turn);
         clearResult();
+    }
+
+    function clickDice(){
+        yatzyCheck();
+        document.getElementById("dice1").addEventListener("click", toggleActive)
+        document.getElementById("dice2").addEventListener("click", toggleActive)
+        document.getElementById("dice3").addEventListener("click", toggleActive)
+        document.getElementById("dice4").addEventListener("click", toggleActive)
+        document.getElementById("dice5").addEventListener("click", toggleActive)
     }
 
 }
