@@ -3,9 +3,7 @@ window.onload = function(){
     document.getElementById("throw").addEventListener("click", throwDice);
     document.getElementById("total-uppe").addEventListener("click", sumUp);
     //document.getElementById("namn5").addEventListener("click", getValue);
-    x = [];//dices
     y = [];//Chosen dices
-    z = []//Chosen dices values
     players = [];
     let timethrowed = 0;
     let classlength = 0;
@@ -19,9 +17,7 @@ window.onload = function(){
     document.getElementById("start").addEventListener("click", newGame);
 
     function newGame(){
-        x = [];//dices
         y = [];//Chosen dices
-        z = []//Chosen dices values
         players = [];
         clearResult();
         let a = prompt("Hur många spelare?")
@@ -115,9 +111,11 @@ window.onload = function(){
     }
 
     function throwDice(){
+        y = [];
         getActive();
         document.getElementById("next").style.display = "block";
         document.getElementById("next").addEventListener("click", nextPlayer)
+        console.log(classlength);
         if (classlength < 1 && timethrowed < 3){
             clearResult();
             let i = 0;
@@ -180,7 +178,7 @@ window.onload = function(){
         let a = 0;
         let b = document.getElementsByClassName("active")
         if (classlength < 1){
-            return;
+            return; 
         }else
             do {
                 c = b[a].id
@@ -196,21 +194,17 @@ window.onload = function(){
     }
 
     function nextPlayer(){
-        x = [];
         y = [];
-        z = [];
         timethrowed = 0;
         let b = players.length;
         if (turn < b - 1){
             turn++
             whosTurn(turn);
             clearResult();
-            console.log("if")
         }else
         turn = 0;
         whosTurn(turn);
         clearResult();
-        console.log("else")
     }
 
 }
