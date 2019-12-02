@@ -24,6 +24,7 @@ window.onload = function () {
             return;
         }
         document.getElementById("grid-container").style.display = "grid";
+        document.getElementById("grid-container").style.visibility = "visible";
         document.getElementById("throw").style.display = "block";
         let i = 1;
         if (a > 5) {
